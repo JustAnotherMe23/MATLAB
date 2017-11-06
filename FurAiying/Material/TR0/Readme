@@ -1,0 +1,24 @@
+ To run equSA, you need to change the following parameters and recompile it:
+
+ 1.  DataNum=100, DataP=200, MaxNei=22;
+      
+     DataNum is n, i.e., the number of observations,
+     DataP   is p, i.e., the number of variables,
+     MaxNei  should be set around n/log(n), but much be less than n-4.
+
+
+2.  ALPHA1=0.05, ALPHA2=0.01;
+    
+    ALPHA1 is the signficance level used in correlation screeing,
+    and ALPHA2 is the significance level used in \psi-screening.
+
+3.  ins=fopen("TR0.dat","r"); 
+      
+    Replace "TR0.dat" by your own data file, where the data is 
+    arranged in "n rows and p columns". 
+    
+4.  To plot the Gaussian Graphical networks, you can run plot.R 
+    with the following command in R:
+    >source("plot.R")
+ 
+ 
